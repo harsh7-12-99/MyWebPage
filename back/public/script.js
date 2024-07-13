@@ -10,7 +10,7 @@ function submitForm(e) {
     formData.append("file", files.files[i]);
   }
 
-  fetch("http://localhost:5000/upload_files", {
+  fetch("http://13.201.103.2:5000/upload_files", {
     method: "POST",
     body: formData,
   })
@@ -26,7 +26,7 @@ function download(e) {
 
   console.log(name.value);
 
-  fetch("http://localhost:5000/download", {
+  fetch("http://13.201.103.2:5000/download", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
